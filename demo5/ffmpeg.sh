@@ -1,7 +1,7 @@
 #!/bin/bash
-for i in $(seq 1 100)
+for i in $(seq 1 50)
 do
-ffmpeg -re  -i ~/Desktop/jiangziya_hls.mp4  -codec copy  -f flv "rtmp://10.200.20.28:1966/jztest4/test$i?domain=pili-publish.jztest4.cloudvdn.com" &
+ffmpeg -re -i /Users/mowuya/Desktop/ffmpeg-test/testlong.mp4  -vcodec h264 -acodec aac -f flv "rtmp://58.254.141.76:1966/ly-live/xuqiangv$i?domain=pili-rtmp-publish.tech-idiot.tech" &
 #echo $i &
 sleep 1;
 done
